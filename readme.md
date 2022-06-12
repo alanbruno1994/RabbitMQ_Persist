@@ -298,4 +298,25 @@ Exemplo de requisição
 
 Aqui irei desmostrar três situações que irão que vão ilustrar o funcionamento deste projeto como sua persistência.
 
+### Sucesso
+
+O gif abaixo ilustra um caso de sucesso onde mensagens são enviadas e as mesmas retornam, e são mostradas em um console:
 ![alt text](https://github.com/alanbruno1994/RabbitMQ_Persist/blob/master/images/sucesso.gif?raw=true)
+
+### Retentativa
+
+O gif abaixo mostra o caso em é provocado uma falha, que necessa caso é coloca o name na requisição é maior que o permitido.
+Dessa forma, as mensagens não são porcessadas e a veremos retantivas. No gif, também você verá um ajuste no código para que as mensagens
+sejam validadas e ai elas sejam lidas e sejam apagadas da fila
+![alt text](https://github.com/alanbruno1994/RabbitMQ_Persist/blob/master/images/tentativa.gif?raw=true)
+
+### Persistência
+
+Aqui é provocado uma situação onde as mensagens acabam não sendo lidas. E ai ela ficam no RabbitMQ. E ai desativamos ele
+e ai ativamos ele novamente e ai vemos que as mensagens ainda estão lá. E tiramos o elemento que não fazia as mensagens serem lidas. E ai elas são
+apagadas da fila.
+![alt text](https://github.com/alanbruno1994/RabbitMQ_Persist/blob/master/images/persistencia.gif?raw=true)
+
+## Autores 🚀
+
+- [Álan Bruno Rios Miguel](https://www.github.com/alanbruno1994)
